@@ -1,0 +1,83 @@
+body{
+    background: url('../CNPM/anhngongu1.gif');
+/*    background-color:#F5F5DC ;*/
+    font-family: sans-serif;
+}
+
+.dangtaittgv{
+    width: 580px;
+    height: 660px;
+/*    background: url('../CNPM/anhngongu2.jfif');*/
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+
+
+}
+.dangtaittgv h1{
+    display: inline-block ;
+    color: grey;
+}
+
+.dangtaittgv .text_input{
+    /* position: relative; */
+    display: flex;
+    margin-top: 20px;
+    /* align-items: center; */
+}
+.text_input p{
+    /* position: absolute; */
+    /* margin: ; */
+    margin-left: 10px;
+    width: 150px;
+
+}
+.text_input input,
+.text_input textarea{
+    margin-left: 20px;
+    width: 70%;
+    margin-right: 40px;
+    flex: 1;
+    border-radius: 10px;
+    border: 2px solid #9933CC;
+    height: 40px;
+
+}
+.text_input_2 p{
+      /* position: absolute; */
+    /* margin: ; */
+    margin-left: 10px;
+    width: 150px; 
+
+}
+
+/*.radio_input{
+    margin-left: 20px;
+    width: 70%;
+    margin-right: 40px;
+    flex: 1;
+    border-radius: 10px;
+    border: 2px solid #9933CC;
+    height: 40px;
+}
+
+*/
+
+textarea{
+    max-height: 100px;
+}
+.dangtaittgv .nut_dk{
+    border: none;
+    width: 240px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #8FBC8F;
+    color: white;
+    margin-top: 30px;
+
+}
+.img{
+    margin-left: 0px;
+}

@@ -1,0 +1,58 @@
+body{
+	background: url('../CNPM/anhngongu1.gif');
+/*    background-color:#F5F5DC ;*/
+    font-family: sans-serif;
+    margin: 0;
+}
+phanloai{
+	overflow: hidden;
+	background-color: #9933CC ;
+}
+.phanloai .phanloai_tk{
+	float: right;
+}
+.phanloai input[type = text]{
+	padding: 6px;
+	margin-top: 8px ;
+	font-size: 17px;
+	border: none;
+}
+.phanloai .phanloai_tk button{
+	float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.phanloai .phanloai_tk button:hover{
+	background: #ccc;
+}
+@media screen and (max-width: 600px){
+	.phanloai .phanloai_tk{
+		float: none;
+	}
+}
+ .phanloai input[type=text], ,phanloai .phanloai_tk button{
+ 	float: none;
+ 	display: block;
+ 	text-align: left;
+ 	width: 100%;
+ 	margin: 0;
+ 	padding: 14px;
+ }
+.phanloai input[type=text]{
+	border: 1px solid #ccc;
+}
+
+
+
+
+.phanloai a{
+	color: #000000;
+	margin-top: 100px;
+}

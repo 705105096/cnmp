@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>tintuc.vn</title>
+	<link rel="stylesheet" type="text/css" href="tintuc.css">
+</head>
+<body>
+	<div class=" tintuc">
+		<h1> Diễn Đàn</h1> 
+		<img src="logo.jpg" alt="logo trang web" width="110px" height="70px">
+		<div class="tintuc1">
+			<input type="text" name="search" placeholder=" Tìm kiếm..."  id="timkiem_input">
+			<button type="submit"><i class="fa fa-search"></i>Tìm kiếm</button>
+		</div>
+				<a style="text-decoration: none;" href="Khóa học lập trình PHP" >Khóa học lập trình PHP</a> <br>
+				
+
+				<a style="text-decoration: none;" href="Khóa học lập trình HTML" >Khóa học lập trình HTML</a><br>
+				
+				<a style="text-decoration: none;" href="Khóa học lập trình Js" >Khóa học lập trình Js</a><br>
+				
+				<a style="text-decoration: none;" href="Khóa học lập trình C#" >Khóa học lập trình C#</a><br>
+				
+				<a style="text-decoration: none;" href="Khóa học lập trình Java" >Khóa học lập trình Java</a><br>
+				
+				<a style="text-decoration: none;" href="Khóa học lập trình Python" >Khóa học lập trình Python</a><br>
+				
+				<a style="text-decoration: none;" href="Khóa học lập trình C++" >Khóa học lập trình C++</a><br>
+
+				        <p>    Learn & Code  cung cấp các khóa học lập trình đa dạng , từ cơ bản đến nâng cao, phù hợp với mọi độ tuổi và trình độ. Các bé có thể tự do chọn khóa học phù hợp với sở thích và mục đich.  Với đội ngũ giáo viên là những chuyên gia hàng đầu trong việc giảng dạy cho trẻ em.</p>
+                        <p>    Learn & Code tạo ra môi trường học tập an toàn, nơi trẻ em có thể tìm hiểu và thử nghiệm mà không gặp lo ngại. Chúng tôi cũng có hệ thống hỗ trợ để giúp các bé vượt qua khó khăn trong quá trình học tập.</p>
+                        <p>    Chúng tôi cung cấp các khóa học trực tuyến giúp các bé có thể học tập ở bất kỳ đâu, với nguồn tài liệu dễ hiểu và bám sát nội dung khóa học</p>
+			</div>
+
+
+		<div id="timkiem">
+			
+		</div>
+		<script type="">
+			var timkiem_input = document.getElementById("timkiem_input");
+        var courseList = document.getElementById("courseList");
+        var timkiem = document.getElementById("timkiem");
+
+        timkiem_input.addEventListener("input", function() {
+            var keyword = timkiem_input.value.toLowerCase();
+            timkiem.innerHTML = ""; // Xóa kết quả trước đó
+
+            var courses = courseList.getElementsByTagName("li");
+
+            for (var i = 0; i < courses.length; i++) {
+                var course = courses[i];
+                var courseName = course.textContent.toLowerCase();
+                var category = course.getAttribute("data-category");
+
+                if (courseName.includes(keyword)) {
+                    var timkiem = document.createElement("div");
+                    timkiem.textContent = "Khóa học: " + courseName + " (Danh mục: " + category + ")";
+                    timkiem.appendChild(timkiem);
+                }
+            }
+        });
+		</script>
+
+	</div>
+
+</body>
+</html>

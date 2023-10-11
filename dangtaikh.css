@@ -1,0 +1,60 @@
+body{
+    background: url('../CNPM/anhngongu1.gif');
+/*    background-color:#F5F5DC ;*/
+    font-family: sans-serif;
+}
+
+.dangtaikh{
+    width: 580px;
+    height: 600px;
+/*    background: url('../CNPM/anhngongu2.jfif');*/
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+
+
+}
+.dangtaikh h1{
+    display: inline-block ;
+    color: grey;
+}
+
+.dangtaikh .text_input{
+    /* position: relative; */
+    display: flex;
+    margin-top: 20px;
+    /* align-items: center; */
+}
+.text_input p{
+    /* position: absolute; */
+    /* margin: ; */
+    margin-left: 10px;
+    width: 150px;
+
+}
+.text_input input,
+.text_input textarea{
+    margin-left: 20px;
+    width: 70%;
+    margin-right: 30px;
+    flex: 1;
+    border-radius: 10px;
+    border: 2px solid #40aa1f;
+    height: 40px;
+
+}
+textarea{
+    max-height: 100px;
+}
+.dangtaikh .nut_dk{
+    border: none;
+    width: 240px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #8FBC8F;
+    color: white;
+    margin-top: 30px;
+
+}
