@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng tài liệu - Giáo viên</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/ee7308e344.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="thanhdieuhuong">
+        <nav>
+            <a href="teacher_index.html"><img src="/Photo/Learn&CodeLogo_Transparent.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Về Learn&Code</a></li>
+                <li><a href="teacher_course.html" style="background-color: #fff; color: #9F91CC; padding: 10px; border-radius: 10%;">Khóa học</a></li>
+                <li><a href="#">Lớp học</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Tin nhắn</a></li>
+            </ul>
+            <img src="/Photo/user_images.png" class="user-pic" onclick="toggleMenu()">
+
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="/Photo/user_images.png">
+                        <h3>Nguyễn Văn A</h3>
+                    </div>
+                    <hr>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-user-pen" style="color: #5c4b99;"></i>
+                        <p>Chỉnh sửa thông tin</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-gear" style="color: #5c4b99;"></i>
+                        <p>Cài đặt</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-circle-info" style="color: #5c4b99;"></i>
+                        <p>Trợ giúp</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <i class="fa-solid fa-right-from-bracket" style="color: #5c4b99;"></i>
+                        <p>Đăng xuất</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="noidung">
+        <div class="upload_form">
+            <h2>TẠO MỘT TÀI LIỆU</h2>
+            <div class="form_content">
+                <form id="upload_form1">
+                    <table class="lesson-table">
+                        <!-- Tiêu đề -->
+                        <tr>
+                            <td><label>Tiêu đề</label></td>
+                            <td>
+                                <input type="text" id="title" name="title" placeholder="Nhập tiêu đề" required>
+                                <small>Message</small>
+                                <!-- <div id="title_error" style="color: red; margin-top: 10px;">Xin vui lòng nhập tiêu đề</div> -->
+                            </td>
+                        </tr>
+
+                        <!-- Tải tài liệu -->
+                        <tr>
+                            <td><label>Tài liệu</label></td>
+                            <td id="upload">
+                                <input type="file" id="upload_file" name="upload_file" placeholder="">
+                                <small>Message</small>
+                            </td>
+                        </tr>
+
+                        <!-- Tên người tạo -->
+                        <tr>
+                            <td><label>Tên người tạo</label></td>
+                            <td>
+                                <input type="text" id="name_uploader" name="name_uploader" placeholder="Nhập họ tên người đăng" required>
+                                <small>Message</small>
+                                <!-- <div id="name_uploader_error" style="color: red; margin-top: 10px;"> Xin vui lòng nhập tên người tạo </div> -->
+                            </td>
+                        </tr>
+
+                        <!-- Tên khóa học -->
+                        <tr>
+                            <td><label>Khóa học</label></td>
+                            <td>
+                                <input type="text" id="course_name" name="course_name" placeholder="Nhập khóa học" required>
+                                <small>Message</small>
+                                <!-- <div id="course_name_error" style="color: red; margin-top: 10px;"> Xin vui lòng nhập khóa học </div> -->
+                            </td>
+                        </tr>
+
+                        <!-- Nội dung -->
+                        <tr>
+                            <td><label>Nội dung</label></td>
+                            <td><textarea name="" id="detail" cols="30" rows="10"></textarea></td>
+                        </tr>
+                    </table>
+
+                    <!-- Nút xác nhận -->
+                    <button class="abc" onclick="">Lưu tài liệu</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="mxh">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-at"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="#">Về Learn&Code</a></li>
+                    <li><a href="#">Khóa học</a></li>
+                    <li><a href="#">Lớp học</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Tin nhắn</a></li>
+                </ul>
+            </div>
+            <div class="footerBottom">
+                <p>CopyRight &copy;2023; Designed by <span class="designer">Nhóm 2</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Kéo thanh cá nhân
+        let subMenu = document.getElementById("subMenu");
+
+        function toggleMenu(){
+            subMenu.classList.toggle("open-menu");
+        }
+
+        // Thông báo
+        let title = document.getElementById("title");
+        let name_uploader = document.getElementById("name_uploader");
+        let course_name = document.getElementById("course_name");
+        let form = document.querySelector("form");
+        let errorMessages = document.getElementById("errorMessages");
+        let upload_file = document.getElementById("upload_file")
+
+        function validateInput(){
+            //Kiểm tra tiêu đề
+            if(title.value.trim() === ""){
+                onError(title, "Xin vui lòng nhập tiêu đề");
+            } else {
+                onSuccess(title);
+            }
+
+            //Kiểm tra file
+            if(upload_file.value.trim() === ""){
+                onError(upload_file, "Xin vui lòng thêm tài liệu");
+            } else {
+                onSuccess(upload_file);
+            }
+
+            //Kiểm tra tên người đăng
+            if(name_uploader.value.trim() === ""){
+                onError(name_uploader, "Xin vui lòng nhập tên người tạo");
+            } else {
+                onSuccess(name_uploader);
+            }
+
+            //Kiểm tra tên khóa học
+            if(course_name.value.trim() === ""){
+                onError(course_name, "Xin vui lòng nhập tên khóa học");
+            } else {
+                onSuccess(course_name);
+            }
+        }
+
+        document.querySelector("button")
+        .addEventListener("click",(event)=>{
+            event.preventDefault();
+            validateInput();
+        });
+
+        function onSuccess(input){
+            let parent = input.parentElement;
+            let messageEle = parent.querySelector("small");
+            messageEle.style.visibility = "hidden";
+            alert("Đăng tải thành công");
+            location.href="teacher_file.html";
+        }
+
+        function onError(input,message){
+            let parent = input.parentElement;
+            let messageEle = parent.querySelector("small");
+            messageEle.style.visibility = "visible";
+            messageEle.innerText = message;
+        }
+    </script>
+</body>
+</html>
